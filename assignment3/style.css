@@ -1,0 +1,70 @@
+h1 {
+  font-family: "Nixie One", Avenir, "Helvetica Neue", Helvetica, sans-serif; /* Nixie One was downloaded from Google Fonts */
+  font-size: 50px;
+  padding: 5px 10px 5px 10px;
+  background-color: #18938F;
+  position: fixed;
+  right: 30px;
+  top: -5px;
+}
+
+h2 {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  color: #18938F;
+  border: 1px dashed black;
+  padding: 3px 0px 0px 6px;
+}
+
+p, ol, ul {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.5;
+  text-align: left;
+  padding: 0px 100px 0px 100px
+}
+
+body p {
+  text-align: justify;
+  padding: 0px 100px 0px 100px;
+}
+
+ul {
+  list-style-type: circle; /* I looked up different unorganized list style types here: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
+}
+
+#book-title {
+  font-style: italic;
+}
+
+#marisa-photo {
+  max-width: 40%;
+  height: auto;
+  padding: 20px 0px 0px 22px;
+}
+
+a {
+  color: #18938F;
+}
+
+a:hover {
+  color: #BD78E5;
+  text-decoration: underline;
+}
+
+.link:hover::after{
+  content: " ⇇";
+}
+
+.link:hover::before {
+  content: "⇉ ";
+}
+
+::selection { /* Not an "offical" CSS property so it triggered an error message upon validation, but I used it anyway because it's valid */
+  color: white;
+  text-decoration: none; /* I was trying to get the link underlines to go away when selected, but I couldn't find a way to do this */
+  background-color: #E5CAF5;
+}
+
+body {
+  background-color: #EAEAEA;
+  margin: 10px;
+}

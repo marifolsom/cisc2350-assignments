@@ -1,0 +1,40 @@
+h1 {
+  font-family: "HelveticaNeue-Light";
+  font-size:35.5px;
+  padding: 5px;
+}
+
+h2 {
+  font-family: "HelveticaNeue-Light";
+  border: 1px dashed black;
+  color: #18938F; /* I looked up CSS color codes here: http://www.quackit.com/css/css_color_codes.cfm */
+  padding: 0px 0px 0px 5px;
+}
+
+p, ol, ul {
+  font-family: "HelveticaNeue-Light";
+}
+
+p {
+  padding: 0px 22px 0px 22px;
+}
+
+ul {
+  list-style-type: circle; /* Found different list marker style types here: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
+}
+
+#book-title {
+  font-style: italic;
+}
+
+#marisa-photo {
+  padding: 5px;
+}
+
+a:hover {
+  color: #BD78E5; /* I looked up how to change the color when the mouse hovers over a link: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links */
+}
+
+body {
+  background-color: #EAEAEA;
+}
