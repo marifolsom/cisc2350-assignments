@@ -10,8 +10,9 @@ h1 {
   border: 1px solid #CCCCCC;
   border-width: 1px 0;
   list-style: none;
-  margin: 20px;
+  margin: 15px;
   text-align: center;
+  padding: 0;
 }
 
 .nav li {
@@ -35,6 +36,7 @@ img {
   margin-left: 8px;
   margin-right: auto;
   height: 270px;
+  padding: 5px 0 10px 0;
 }
 
 .header-images a{
@@ -51,7 +53,8 @@ h2 {
   color: #18938F;
   border: 1px solid #CCCCCC;
   border-width: 0 0 1px 0;
-  padding: 3px 0 0 30px;
+  padding: 3px 0 0 50px;
+  margin: 0 15px;
 }
 
 .italic {
@@ -67,7 +70,7 @@ p, ol, ul {
   font-size: 15px;
   line-height: 1.5;
   text-align: left;
-  padding: 0 60px 0 60px
+  padding: 0 150px 0 150px
 }
 
 a {
@@ -82,4 +85,57 @@ a:hover {
 footer {
   border: 1px solid #CCCCCC;
   border-width: 1px 0 0 0;
+  margin: 0 15px;
+}
+
+footer p {
+  padding: 0 135px 0 135px; /* I wanted to keep the text in footer p at the same alignment as the other ps, but the 15px margin that I added to keep the footer border the same length as the others messed with that. */
+}
+
+::selection {
+  color: white;
+  text-decoration: none;
+  background-color: #CFE9E7;
+}
+
+.no-screen {
+  display: none;
+  height: 0;
+}
+
+@media only print { /* wrap print styling within this media query for it to be applied! */
+  h1 {
+    font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .nav, .header-images, footer { /* I looked up how to hide certain elements when printing here: http://stackoverflow.com/questions/355313/how-do-i-hide-an-element-when-printing-a-web-page */
+    display: none !important;
+    height: 0;
+  }
+
+  h2 {
+    font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    color: #18938F;
+    border: 1px solid #CCCCCC;
+    border-width: 0 0 1px 0;
+    padding: 0 0 0 20px;
+    margin: 0 15px;
+  }
+
+  p, ol, ul {
+    font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: left;
+    padding: 0 45px 0 45px
+  }
+
+  .no-screen {
+    display: inline; /* I looked up how to show/hide certain things on screen vs. only when printing here: http://stackoverflow.com/questions/11116836/element-visible-only-on-print-page */
+    height: auto;
+  }
+
 }
