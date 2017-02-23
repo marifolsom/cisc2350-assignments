@@ -11,7 +11,6 @@ h1 {
   border-width: 1px 0;
   list-style: none;
   margin: 20px;
-  padding: 0;
   text-align: center;
 }
 
@@ -21,7 +20,7 @@ h1 {
 
 .nav a {
   display: inline-block;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 15px 10px 15px;
   text-decoration: none;
   font-weight: bold;
   color: #18938F;
@@ -55,6 +54,14 @@ h2 {
   padding: 3px 0 0 30px;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 p, ol, ul {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 15px;
@@ -75,5 +82,4 @@ a:hover {
 footer {
   border: 1px solid #CCCCCC;
   border-width: 1px 0 0 0;
-  padding: 0;
 }
