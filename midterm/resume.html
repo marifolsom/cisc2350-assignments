@@ -7,13 +7,13 @@
 </head>
 
 <body>
+  <a id="top-button"></a> <!-- I looked up how to make a basic back to top button here: http://stackoverflow.com/questions/32102747/how-to-make-a-back-to-top-button-using-css-and-html-only -->
   <header>
     <h1>M A R I S A &nbsp;F O L S O M</h1>
   </header>
 
-  <div class="no-screen"> <!-- I looked up how to show/hide certain things on screen vs. only when printing here: http://stackoverflow.com/questions/11116836/element-visible-only-on-print-page -->
-    <p>Email: mfolsom1@fordham.edu &nbsp; &nbsp; &nbsp; Call: 929-2264504
-    </p>
+  <div class="contact-info">
+    <p>Email: <a href="mailto:mfolsom1@fordham.edu">mfolsom1@fordham.edu</a> &nbsp; &nbsp; &nbsp; Cell: 929-2264504 &nbsp; &nbsp; &nbsp; Address: 115 W 104th St. Apt. 4 New York, NY 10025</p>
   </div>
 
   <ul class="nav">
@@ -23,7 +23,6 @@
     <li><a href="resume.html#skills">S K I L L S</a></li>
     <li><a href="bio.html">B I O</a></li>
     <li><a href="http://marisafolsom.format.com/" target="_blank">P O R T F O L I O</a></li>
-    <li><a href="mailto:mfolsom1@fordham.edu">C O N T A C T</a></li>
   </ul>
 
   <div class="header-images">
@@ -100,7 +99,7 @@
 
   <section>
     <h2 id="relevant-courses">R E L E V A N T &nbsp;C O U R S E S</h2>
-    <ul>
+    <ul class="column-list">
       <li>Photography I &amp; II</li>
       <li>Documentary Photography</li>
       <li>Digital Design and Graphic Tools</li>
@@ -111,7 +110,7 @@
 
   <section>
     <h2 id="skills">S K I L L S</h2>
-    <ul>
+    <ul class="column-list">
       <li>Fluent in Japanese and English</li>
       <li>Proficient in Spanish</li>
       <li>Microsoft Office, iWorks, Google Docs</li>
@@ -121,8 +120,10 @@
     </ul>
   </section>
 
+  <a class="top-button" href=#top-button>&#8593;</a> <!-- I looked up the HTML code for an upwards pointing arrow -->
+
   <footer>
-    <p>For more information on Marisa's work, to contact regarding employment opportunities, or to just say hello, feel free to <a href="contact.html">get in touch</a>. ☺
+    <p>For more information on Marisa's work, to contact regarding employment opportunities, or to just say hello, feel free to <a href="mailto:mfolsom1@fordham.edu">get in touch</a>. ☺
     </p>
   </footer>
 </body>

@@ -1,9 +1,16 @@
+/* Header */
 h1 {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 50px;
   text-align: center;
 }
 
+/* Contact info */
+.contact-info p {
+  text-align: center;
+}
+
+/* Navigation bar */
 .nav {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 15px;
@@ -31,6 +38,7 @@ h1 {
   text-decoration: underline;
 }
 
+/* Header images */
 img {
   display: inline-block;
   margin-left: 8px;
@@ -47,6 +55,7 @@ img {
   text-decoration: none
 }
 
+/* Typography */
 h2 {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 20px;
@@ -82,6 +91,12 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Column list */
+.column-list {
+  columns: two;
+}
+
+/* Footer */
 footer {
   border: 1px solid #CCCCCC;
   border-width: 1px 0 0 0;
@@ -92,25 +107,35 @@ footer p {
   padding: 0 135px 0 135px; /* I wanted to keep the text in footer p at the same alignment as the other ps, but the 15px margin that I added to keep the footer border the same length as the others messed with that. */
 }
 
+/* Highlighted text */
 ::selection {
   color: white;
   text-decoration: none;
   background-color: #CFE9E7;
 }
 
-.no-screen {
-  display: none;
-  height: 0;
+/* Back to top button */
+.top-button {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 15px;
+  position: fixed;
+	bottom: 30px;
+	right: 30px;
+  color: #231F20;
+  background-color: #18938F;
+  padding: 10px 15px 10px 15px;
+  margin: inherit;
 }
 
-@media only print { /* wrap print styling within this media query for it to be applied! */
+/* Print specific styling */
+@media only print {
   h1 {
     font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
-    text-align: left;
+    text-align: center;
   }
 
-  .nav, .header-images, footer { /* I looked up how to hide certain elements when printing here: http://stackoverflow.com/questions/355313/how-do-i-hide-an-element-when-printing-a-web-page */
+  .nav, .header-images, footer, .top-button { /* I looked up how to hide certain elements when printing here: http://stackoverflow.com/questions/355313/how-do-i-hide-an-element-when-printing-a-web-page */
     display: none !important;
     height: 0;
   }
@@ -132,10 +157,4 @@ footer p {
     text-align: left;
     padding: 0 45px 0 45px
   }
-
-  .no-screen {
-    display: inline; /* I looked up how to show/hide certain things on screen vs. only when printing here: http://stackoverflow.com/questions/11116836/element-visible-only-on-print-page */
-    height: auto;
-  }
-
 }
