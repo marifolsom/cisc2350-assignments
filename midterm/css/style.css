@@ -1,8 +1,18 @@
+/* Normalize */
+body, html {
+  height: 100%;
+  margin: 5px;
+  padding: 0;
+  position: relative;
+	color: #231F20;
+}
+
 /* Header */
 h1 {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 50px;
   text-align: center;
+  margin: 30px 0px 30px 0px;
 }
 
 /* Contact info */
@@ -62,12 +72,14 @@ h2 {
   color: #18938F;
   border: 1px solid #CCCCCC;
   border-width: 0 0 1px 0;
-  padding: 3px 0 0 50px;
+  padding: 0 0 0 50px;
   margin: 0 15px;
 }
 
 .italic {
   font-style: italic;
+  font-family: Georgia; serif;
+  font-size: 10px,
 }
 
 .bold {
@@ -91,16 +103,22 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Column list */
-.column-list {
-  columns: two;
+/* Relevant courses & skills side-by-side */
+#relevant-courses {
+  float: left;
+  width: 50%;
+}
+
+#skills {
+  overflow: hidden; /* I utilized the overflow: hidden after finding out what it does here: http://stackoverflow.com/questions/132649/what-is-the-difference-between-overflowhidden-and-displaynone */
+  width: 50%;
 }
 
 /* Footer */
 footer {
   border: 1px solid #CCCCCC;
   border-width: 1px 0 0 0;
-  margin: 0 15px;
+  margin: 0 15px 35px 15px;
 }
 
 footer p {
@@ -123,16 +141,22 @@ footer p {
 	right: 30px;
   color: #231F20;
   background-color: #18938F;
+  border-radius: 5px;
   padding: 10px 15px 10px 15px;
   margin: inherit;
 }
 
 /* Print specific styling */
 @media only print {
+  html, body {
+    height: 95%;
+  }
+
   h1 {
     font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
+    margin: 10px 0px 10px 0px;
   }
 
   .nav, .header-images, footer, .top-button { /* I looked up how to hide certain elements when printing here: http://stackoverflow.com/questions/355313/how-do-i-hide-an-element-when-printing-a-web-page */
