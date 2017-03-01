@@ -78,8 +78,7 @@ h2 {
 
 .italic {
   font-style: italic;
-  font-family: Georgia; serif;
-  font-size: 10px,
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .bold {
@@ -126,7 +125,7 @@ footer p {
 }
 
 /* Highlighted text */
-::selection {
+::selection { /* This shows up as unknown in the CSS validator because it's an unofficial property */
   color: white;
   text-decoration: none;
   background-color: #CFE9E7;
