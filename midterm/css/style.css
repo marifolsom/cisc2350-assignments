@@ -1,5 +1,8 @@
 /* Normalize */
 body, html {
+  /*
+    YE - great!
+  */
   height: 100%;
   margin: 5px;
   padding: 0;
@@ -9,6 +12,9 @@ body, html {
 
 /* Header */
 h1 {
+  /*
+    YE - excellent font lists
+  */
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 50px;
   text-align: center;
@@ -147,6 +153,9 @@ footer p {
 
 /* Print specific styling */
 @media only print {
+  /*
+    YE - awesome job on print
+  */
   html, body {
     height: 95%;
   }
