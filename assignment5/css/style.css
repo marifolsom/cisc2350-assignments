@@ -1,18 +1,19 @@
 /* Normalize */
 body, html {
   height: 100%;
-  margin: 5px;
+  margin: 0.5rem;
   padding: 0;
   position: relative;
+  font-size: 0.8rem;
 	color: #231F20;
 }
 
 /* Header */
 h1 {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 4rem;
   text-align: center;
-  margin: 30px 0px 30px 0px;
+  margin: 3rem 0 3rem 0;
 }
 
 /* Contact info */
@@ -23,11 +24,11 @@ h1 {
 /* Navigation bar */
 .nav {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   border: 1px solid #CCCCCC;
   border-width: 1px 0;
   list-style: none;
-  margin: 15px;
+  margin: 3.5rem;
   text-align: center;
   padding: 0;
 }
@@ -38,7 +39,7 @@ h1 {
 
 .nav a {
   display: inline-block;
-  padding: 10px 15px 10px 15px;
+  padding: 0.8rem 1rem 0.8rem 1rem;
   text-decoration: none;
   font-weight: bold;
   color: #18938F;
@@ -49,12 +50,18 @@ h1 {
 }
 
 /* Header images */
+.header-images {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
 img {
   display: inline-block;
-  margin-left: 8px;
+  margin-left: 1rem;
   margin-right: auto;
-  height: 270px;
-  padding: 5px 0 10px 0;
+  height: 30rem;
+  padding: 0.5rem 0 1rem 0;
 }
 
 .header-images a{
@@ -68,12 +75,12 @@ img {
 /* Typography */
 h2 {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 1rem;
   color: #18938F;
   border: 1px solid #CCCCCC;
   border-width: 0 0 1px 0;
-  padding: 0 0 0 50px;
-  margin: 0 15px;
+  padding: 0 0 0 2.5rem;
+  margin: 3.5rem 3.5rem 0 3.5rem;
 }
 
 .italic {
@@ -87,10 +94,10 @@ h2 {
 
 p, ol, ul {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 0.8rem;
   line-height: 1.5;
   text-align: left;
-  padding: 0 150px 0 150px
+  padding: 0 6rem 0 6rem;
 }
 
 a {
@@ -102,26 +109,20 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Relevant courses & skills side-by-side */
-#relevant-courses {
-  float: left;
-  width: 50%;
-}
-
-#skills {
-  overflow: hidden; /* I utilized the overflow: hidden after finding out what it does here: http://stackoverflow.com/questions/132649/what-is-the-difference-between-overflowhidden-and-displaynone */
-  width: 50%;
+/* Container */
+.container {
+  margin:
 }
 
 /* Footer */
 footer {
   border: 1px solid #CCCCCC;
   border-width: 1px 0 0 0;
-  margin: 0 15px 35px 15px;
+  margin: 3.5rem 3.5rem 0 3.5rem;
 }
 
 footer p {
-  padding: 0 135px 0 135px; /* I wanted to keep the text in footer p at the same alignment as the other ps, but the 15px margin that I added to keep the footer border the same length as the others messed with that. */
+  padding: 0 2.5rem 3.5rem 2.5rem;
 }
 
 /* Highlighted text */
@@ -134,16 +135,17 @@ footer p {
 /* Back to top button */
 .top-button {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 1.2rem;
   position: fixed;
-	bottom: 30px;
-	right: 30px;
+	bottom: 2.5rem;
+	right: 2.5rem;
   color: #231F20;
   background-color: #18938F;
-  border-radius: 5px;
-  padding: 10px 15px 10px 15px;
+  border-radius: 0.4rem;
+  padding: 0.7rem 1.1rem 0.7rem 1.1rem;
   margin: inherit;
 }
+
 
 /* Print specific styling */
 @media only print {
@@ -158,7 +160,7 @@ footer p {
     margin: 10px 0px 10px 0px;
   }
 
-  .nav, .header-images, footer, .top-button { /* I looked up how to hide certain elements when printing here: http://stackoverflow.com/questions/355313/how-do-i-hide-an-element-when-printing-a-web-page */
+  .nav, .header-images, footer, .top-button {
     display: none !important;
     height: 0;
   }
@@ -179,5 +181,89 @@ footer p {
     line-height: 1.25;
     text-align: left;
     padding: 0 45px 0 45px
+  }
+}
+
+
+/* Tablet specific styling */
+@media only screen and (min-width: 768px) {
+  h1 {
+    margin: 2rem 0 2rem;
+  }
+
+  .nav {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  p, ol, ul {
+    font-size: 1rem;
+    padding: 0 10rem 0 10rem;
+  }
+
+  footer p {
+    padding: 0 7.5rem 7.5rem 7.5rem;
+  }
+
+  .contact-info p {
+    padding: 0;
+  }
+
+  .top-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.1rem 0.6rem 1.1rem;
+  }
+}
+
+
+/* Lapton specific styling */
+@media only screen and (min-width: 1024px) {
+  .nav {
+    font-size: 1.1rem;
+    margin: 2.5rem;
+  }
+
+  img {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: auto;
+    height: 20rem;
+    padding: 0.312rem 0 0.625rem 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 2.5rem 2.5rem 0 2.5rem;
+  }
+
+  p, ol, ul {
+    font-size: 1.1rem;
+    padding: 0 10rem 0 10rem;
+  }
+
+  .top-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.1rem 0.6rem 1.1rem;
+  }
+
+  /* Relevant courses & skills side-by-side */
+  #relevant-courses {
+    float: left;
+    width: 50%;
+  }
+
+  #skills {
+    overflow: hidden;
+  }
+
+  footer {
+    margin: 2.5rem 2.5rem 0 2.5rem;
+  }
+
+  footer p {
+    padding: 0 7.5rem 2.5rem 7.5rem;
   }
 }

@@ -4,6 +4,7 @@ body, html {
   margin: 5px;
   padding: 0;
   position: relative;
+  font-size: 1rem; /* Browser default is usually 16px */
 	color: #231F20;
 }
 
@@ -49,6 +50,12 @@ h1 {
 }
 
 /* Header images */
+.header-images {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
 img {
   display: inline-block;
   margin-left: 8px;
@@ -102,6 +109,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Container */
+.container {
+  margin:
+}
+
 /* Relevant courses & skills side-by-side */
 #relevant-courses {
   float: left;
@@ -109,8 +121,7 @@ a:hover {
 }
 
 #skills {
-  overflow: hidden; /* I utilized the overflow: hidden after finding out what it does here: http://stackoverflow.com/questions/132649/what-is-the-difference-between-overflowhidden-and-displaynone */
-  width: 50%;
+  overflow: hidden;
 }
 
 /* Footer */
@@ -121,7 +132,7 @@ footer {
 }
 
 footer p {
-  padding: 0 135px 0 135px; /* I wanted to keep the text in footer p at the same alignment as the other ps, but the 15px margin that I added to keep the footer border the same length as the others messed with that. */
+  padding: 0 135px 0 135px;
 }
 
 /* Highlighted text */
@@ -158,7 +169,7 @@ footer p {
     margin: 10px 0px 10px 0px;
   }
 
-  .nav, .header-images, footer, .top-button { /* I looked up how to hide certain elements when printing here: http://stackoverflow.com/questions/355313/how-do-i-hide-an-element-when-printing-a-web-page */
+  .nav, .header-images, footer, .top-button {
     display: none !important;
     height: 0;
   }
@@ -180,4 +191,19 @@ footer p {
     text-align: left;
     padding: 0 45px 0 45px
   }
+}
+
+/* Mobile phone specific styling */
+@media only screen and (min-width: 320px) {
+
+}
+
+/* Tablet specific styling */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Lapton specific styling */
+@media only screen and (min-width: 1024px) {
+
 }
