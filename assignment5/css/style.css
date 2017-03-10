@@ -1,8 +1,18 @@
+/**
+  * I had a lot of trouble figuring out whether I should be making my adjustments according
+  * to what I saw on the Chrome Developer Tools or my actual manipulated browser window, as
+  * they were showing two completely different things. I would make some changes and be
+  * looking at the Chrome Dev Tools, but then move my browser window around to find that it
+  * doesn't actually look the way I thought, and vise versa. This was especially the case
+  * with my navigation bar, my images, and my back to top button.
+  */
+
+
 /* Normalize */
 body, html {
   height: 100%;
   margin: 0.5rem;
-  padding: 0;
+  padding: 0;and
   position: relative;
   font-size: 0.8rem;
 	color: #231F20;
