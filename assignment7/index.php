@@ -28,10 +28,10 @@
   <h2><?php echo "CLASSES TAKEN" ?></h2>
     <?php $classes_taken = array("VART1124" => "Photography I", "VART2003" => "Digital Design and Graphic Tools", "VART2500" => "Typography and Design", "VART2700" => "Logos, Branding, and Presentation"); ?>
     <ul>
-      <li><?php echo $classes_taken["VART1124"] ?></li>
-      <li><?php echo $classes_taken["VART2003"] ?></li>
-      <li><?php echo $classes_taken["VART2500"] ?></li>
-      <li><?php echo $classes_taken["VART2700"] ?></li>
+      <li><?php echo $classes_taken["VART1124"]; ?></li>
+      <li><?php echo $classes_taken["VART2003"]; ?></li>
+      <li><?php echo $classes_taken["VART2500"]; ?></li>
+      <li><?php echo $classes_taken["VART2700"]; ?></li>
     </ul>
 
   <h2><?php echo "ACADEMIC CREDITS" ?></h2>
@@ -39,24 +39,25 @@
       $earned_credits = "143";
       $total_credits = "124";
       $credits_needed = $total_credits - $earned_credits;
-      if ($earned_credits >= 18 && $earned_credits < 42) {
+      if ($earned_credits < 30) {
         $classification_year = "freshman";
-      } elseif ($earned_credits >= 42 && $earned_credits < 69) {
+      } elseif ($earned_credits >= 30 && $earned_credits < 60) {
         $classification_year = "sophomore";
-      } elseif ($earned_credits >= 69 && $earned_credits < 99) {
+      } elseif ($earned_credits >= 60 && $earned_credits < 92) {
         $classification_year = "junior";
-      } elseif ($earned_credits >= 99) {
+      } elseif ($earned_credits >= 92) {
         $classification_year = "senior";
       }
       define ("YOUR_CLASSIFICATION_YEAR", $classification_year)
       ?>
-    <p><?php echo "Total credits to graduate from Fordham University: $total_credits";
+    <p><?php
+      echo "Total credits to graduate from Fordham University: $total_credits.";
       echo '<br>';
-      echo "Earned credits: $earned_credits";
-      echo '<br>';
-      echo "Credits left to take: $credits_needed"; // I'm graduating in May, so I actually already have more than the credits required to graduate!
+      echo "Earned credits: $earned_credits.";
       echo '<br>';
       echo 'I am classified as a ' . YOUR_CLASSIFICATION_YEAR . ".";
+      echo '<br>';
+      echo "I need $credits_needed credits to graduate."; // I'm graduating in May, so I actually already have more than the credits required to graduate, so the output comes out negative.
       ?>
     </p>
 </body>
