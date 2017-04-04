@@ -26,9 +26,10 @@
     </ol>
 
   <h2><?php echo "CLASSES TAKEN" ?></h2>
-    <?php $classes_taken = array("VART1124" => "Photography I", "VART2003" => "Digital Design and Graphic Tools", "VART2500" => "Typography and Design", "VART2700" => "Logos, Branding, and Presentation"); ?>
+    <?php $classes_taken = array("VART1124" => "Photography I", "VART2185" => "Photography II", "VART2003" => "Digital Design and Graphic Tools", "VART2500" => "Typography and Design", "VART2700" => "Logos, Branding, and Presentation"); ?>
     <ul>
       <li><?php echo $classes_taken["VART1124"]; ?></li>
+      <li><?php echo $classes_taken["VART2185"]; ?></li>
       <li><?php echo $classes_taken["VART2003"]; ?></li>
       <li><?php echo $classes_taken["VART2500"]; ?></li>
       <li><?php echo $classes_taken["VART2700"]; ?></li>
