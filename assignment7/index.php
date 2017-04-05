@@ -52,10 +52,6 @@
       define ("YOUR_CLASSIFICATION_YEAR", $classification_year)
       ?>
     <p><?php
-      echo "Total credits to graduate from Fordham University: $total_credits.";
-      echo '<br>';
-      echo "Earned credits: $earned_credits.";
-      echo '<br>';
       echo 'I am classified as a ' . YOUR_CLASSIFICATION_YEAR . ".";
       echo '<br>';
       echo "I need $credits_needed credits to graduate."; // I'm graduating in May, so I actually already have more than the credits required to graduate, so the output comes out negative.
