@@ -84,7 +84,7 @@
         return $student_classification;
       }
 
-      echo "The student is classified as a " . get_student_year(143);
+      echo 'The student is classified as a ' . get_student_year(143);
      ?>
   </section>
 
@@ -96,7 +96,7 @@
         return $credits_left;
       }
 
-      echo "The student has " . get_grad_credits(143) . " credits left to graduate."; // Output is negative because I already have enough credits to graduate.
+      echo 'The student has ' . get_grad_credits(143) . ' credits left to graduate.'; // Output is negative because I already have enough credits to graduate.
      ?>
   </section>
 
@@ -126,7 +126,7 @@
         return array($level_up_credits, $next_level); // I looked up how to propagate an array in order to return multiple variables on Stackoverflow here: http://stackoverflow.com/questions/3451906/multiple-returns-from-function
       }
 
-      echo "The student needs " . get_next_level(143)[0] . " more credits to be classified as a " . get_next_level(143)[1] . ".";
+      echo 'The student needs ' . get_next_level(143)[0] . ' more credits to be classified as a ' . get_next_level(143)[1] . '.';
      ?>
   </section>
 
@@ -145,7 +145,7 @@
 
     <p> <?php
       foreach ($students as $name => $credits_earned) {
-        echo ucfirst($name) . " is classified as " . get_student_year($credits_earned) . " and has earned " . $credits_earned . " credits, and needs " . get_grad_credits($credits_earned) . " more credits to graduate. " . "To become a " . get_next_level($credits_earned)[1] . ", " . ucfirst($name) . " needs " . get_next_level($credits_earned)[0] . " more credits. \n <br/>";
+        echo ucfirst($name) . ' is classified as ' . get_student_year($credits_earned) . ' and has earned ' . $credits_earned . ' credits, and needs ' . get_grad_credits($credits_earned) . ' more credits to graduate. ' . 'To become a ' . get_next_level($credits_earned)[1] . ', ' . ucfirst($name) . ' needs ' . get_next_level($credits_earned)[0] . " more credits. \n <br/>";
         // I looked up how to make line breaks in php here: http://stackoverflow.com/questions/12994769/how-to-add-a-line-break-within-echo-in-php
         // I'm getting a notice for an undefined valuable: next_level, but I'm not sure why it worked for Rick and Morty and then no one else?
       }
