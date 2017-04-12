@@ -130,7 +130,7 @@
      ?>
   </section>
 
-  <!--part 2: loops-->
+  <!--part 2 & 3: loops and built-in functions-->
   <section>
     <?php
       $students = array(
@@ -146,19 +146,12 @@
     <p> <?php
       foreach ($students as $name => $credits_earned) {
         echo ucfirst($name) . ' is classified as ' . get_student_year($credits_earned) . ' and has earned ' . $credits_earned . ' credits, and needs ' . get_grad_credits($credits_earned) . ' more credits to graduate. ' . 'To become a ' . get_next_level($credits_earned)[1] . ', ' . ucfirst($name) . ' needs ' . get_next_level($credits_earned)[0] . " more credits. \n <br/>";
+        // I looked up how to make a string's first character uppercase here: http://php.net/manual/en/function.ucfirst.php
         // I looked up how to make line breaks in php here: http://stackoverflow.com/questions/12994769/how-to-add-a-line-break-within-echo-in-php
         // I'm getting a notice for an undefined valuable: next_level, but I'm not sure why it worked for Rick and Morty and then no one else?
       }
      ?>
     </p>
-  </section>
-
-  <!--part 3: built-in functions-->
-  <section>
-    <?php
-      $name = ucfirst($name); // I looked up how to make a string's first character uppercase here: http://php.net/manual/en/function.ucfirst.php
-      $name = str_replace('_', ' ', $name); // Learned about str_replace here: http://php.net/manual/en/function.str-replace.php
-     ?>
   </section>
 </body>
 </html>
