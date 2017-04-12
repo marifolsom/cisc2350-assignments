@@ -135,8 +135,8 @@
     <?php
       $students = array(
         'rick' => 124,
-	      'morty' => 24,
-	      'summer' => 48,
+        'morty' => 24,
+        'summer' => 48,
         'beth' => 75,
         'jerry' => 32,
         'bird_man' => 97
