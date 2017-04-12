@@ -150,6 +150,7 @@
         // I looked up how to make line breaks in php here: http://stackoverflow.com/questions/12994769/how-to-add-a-line-break-within-echo-in-php
         // I'm getting a notice for an undefined valuable: next_level, but I'm not sure why it worked for Rick and Morty and then no one else?
       }
+      $name = str_replace('_', ' ', $name); // Learned about str_replace here: http://php.net/manual/en/function.str-replace.php
      ?>
     </p>
   </section>
