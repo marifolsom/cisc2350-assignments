@@ -116,16 +116,26 @@
         if ($credits_earned < 30) {
           $next_level = "sophomore";
         } elseif ($credits_earned >= 30 && $credits_earned < 60) {
-          $snext_level  = "junior";
+          $snext_level  = "junior"; // YEC - woops
         } elseif ($credits_earned >= 60 && $credits_earned < 92) {
           $next_level  = "senior";
         } elseif ($credits_earned >= 92) {
           $next_level  = "graduate";
         }
 
+
         return array($level_up_credits, $next_level); // I looked up how to propagate an array in order to return multiple variables on Stackoverflow here: http://stackoverflow.com/questions/3451906/multiple-returns-from-function
       }
 
+      /*
+        YE
+        instead of calling get_next_level twice, call it once and save the return value to a variable.  Then
+        you can ech out the values by referencing the variables instead
+
+        e.x.
+        $next_level = get_next_level(143);
+        echo 'The student needs ' . $next_level[0] . ' more credits to be classified as a ' . $next_level[1] . '.';
+       */
       echo 'The student needs ' . get_next_level(143)[0] . ' more credits to be classified as a ' . get_next_level(143)[1] . '.';
      ?>
   </section>
@@ -149,6 +159,15 @@
         // I looked up how to make a string's first character uppercase here: http://php.net/manual/en/function.ucfirst.php
         // I looked up how to make line breaks in php here: http://stackoverflow.com/questions/12994769/how-to-add-a-line-break-within-echo-in-php
         // I'm getting a notice for an undefined valuable: next_level, but I'm not sure why it worked for Rick and Morty and then no one else?
+        /*
+          YE
+          you are getting an error because on line 119 you accidentally wrote the variable as $snext_level and not $next_level -3pts
+         */
+
+        /*
+          YE
+          you should replace the special chars above with the rest of the logic -3pts
+         */
         str_replace('_', ' ', $name); // Learned about str_replace here: http://php.net/manual/en/function.str-replace.php
       }
      ?>
