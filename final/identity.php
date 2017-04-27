@@ -33,7 +33,7 @@
 
       <fieldset>
 				<label for="first-name"></label>
-				<input type="text" name="first-name">
+				<input type="text" name="first-name" placeholder="First Name">
 
         <select name="age" id="age-dropdown">
           <option selected disabled>Age</option> <!-- I looked up how to disable an option in a dropdown list here: http://stackoverflow.com/questions/9447134/html-select-how-to-set-default-text-which-wont-be-shown-in-drop-down-list -->
@@ -49,6 +49,10 @@
 
       <button type="submit" value="Submit">Submit</button>
     </form>
+  </section>
+
+  <section>
+    
   </section>
 
   <footer>
