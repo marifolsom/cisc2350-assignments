@@ -1,0 +1,178 @@
+/* Normalize */
+body, html {
+  height: 100%;
+  margin: 2rem;
+  padding: 0;
+  position: relative;
+  font-size: 16px;
+	color: #d8d8d8;
+}
+
+/* Header */
+h1 {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: ;
+}
+
+/* Navigation bar */
+.nav {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  list-style: none;
+  margin: 1rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  color: #d8d8d8;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: #333333;
+}
+
+.current a { /* I looked up how to change the color of the current page the user is on by added a "current" class to each of the pages: https://www.w3schools.com/css/css_navbar.asp */
+  text-decoration: none;
+  color: #949494;
+}
+
+/* Typography */
+h2 {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333333;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+p {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+section {
+  padding: 0 6rem 0 6rem;
+}
+
+a {
+  color: #949494;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #137572;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 2rem 1rem 1rem 1rem;
+}
+
+footer p {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  color: #d8d8d8;
+}
+
+footer a {
+  color: #d8d8d8;
+  text-decoration: none;
+}
+
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  margin: 0 auto;
+}
+
+.slideshow img {
+  position: absolute;
+  width: 500px;
+  height: auto;
+}
+
+@keyframes xfade{
+  0%{
+    opacity: 1;
+  }
+  25% {
+    opacity:1;
+  }
+  37.5% {
+    opacity:0;
+  }
+  87.5% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.slideshow img:nth-child(4) {
+  animation: xfade 40s 0s infinite;
+}
+
+.container img:nth-child(3) {
+  animation: xfade 40s 10s infinite;
+}
+
+.container img:nth-child(2) {
+  animation: xfade 40s 20s infinite;
+}
+
+.container img:nth-child(1) {
+  animation: xfade 40s 30s infinite;
+}
+
+/* Gallery */
+.gallery {
+  width: 640px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img { /* I looked up how to make a gallery with zoom here: https://codepen.io/oknoblich/pen/ELfzd */
+  display: block;
+  width: 200px;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .3s transform;
+}
