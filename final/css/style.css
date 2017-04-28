@@ -93,6 +93,14 @@ form {
   color: #333333;
 }
 
+input {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+select {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 textarea {
   font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
   width: 100%;
@@ -100,17 +108,20 @@ textarea {
   border-width: thin;
 }
 
+button {
+  margin: 0 0 0 1rem;
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 /* Footer */
 footer {
-  width: 100%;
-  display: inline-block;
   text-align: center;
-  margin: 2rem 1rem 1rem 1rem;
 }
 
 footer p {
-  width: 100%;
   display: inline-block;
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 0 6rem 0 6rem;
   text-align: center;
   color: #d8d8d8;
 }
@@ -120,30 +131,51 @@ footer a {
   text-decoration: none;
 }
 
+/* Back to top button */
+.top-button {
+  font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
+  position: fixed;
+	bottom: 0.5rem;
+	right: 0.5rem;
+  color: #333333;
+  background-color: #d8d8d8;
+  border-radius: 1rem;
+  padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+  margin: inherit;
+  text-decoration: none;
+}
+
+.top-button:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
 
 /* Slideshow */
-.slideshow {
+.slideshow { /* I learned how to make a slideshow using only CSS and HTML here: https://www.experts-exchange.com/articles/14861/Build-a-Pure-CSS3-Slideshow-no-javascript-here.html */
   position: relative;
-  margin: 0 auto;
+  display: block;
 }
 
 .slideshow img {
   position: absolute;
-  width: 500px;
+  display: block;
+  width: 32%;
   height: auto;
+  margin: 0.5rem 0rem 0 24.5rem;
 }
 
 @keyframes xfade{
   0%{
-    opacity: 1;
-  }
-  25% {
     opacity:1;
   }
-  37.5% {
+  20% {
+    opacity:1;
+  }
+  26% {
     opacity:0;
   }
-  87.5% {
+  94% {
     opacity:0;
   }
   100% {
@@ -151,20 +183,24 @@ footer a {
   }
 }
 
+.slideshow img:nth-child(5) {
+  animation: xfade 53s 0s infinite;
+}
+
 .slideshow img:nth-child(4) {
-  animation: xfade 40s 0s infinite;
+  animation: xfade 53s 10s infinite;
 }
 
-.container img:nth-child(3) {
-  animation: xfade 40s 10s infinite;
+.slideshow img:nth-child(3) {
+  animation: xfade 53s 20s infinite;
 }
 
-.container img:nth-child(2) {
-  animation: xfade 40s 20s infinite;
+.slideshow img:nth-child(2) {
+  animation: xfade 53s 30s infinite;
 }
 
-.container img:nth-child(1) {
-  animation: xfade 40s 30s infinite;
+.slideshow img:nth-child(1) {
+  animation: xfade 53s 40s infinite;
 }
 
 /* Gallery */
@@ -184,7 +220,7 @@ footer a {
   display: block;
   width: 200px;
   transition: .1s transform;
-  transform: translateZ(0); /* hack */
+  transform: translateZ(0);
 }
 
 .gallery > div:hover {
@@ -192,6 +228,6 @@ footer a {
 }
 
 .gallery > div:hover > img {
-  transform: scale(1.7,1.7);
+  transform: scale(2.2,2.2);
   transition: .3s transform;
 }
